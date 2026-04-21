@@ -1,69 +1,66 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "name": "智能文档校对优化应用",
-  "tasks": [
+  "status": "core_completed",
+  "completed_at": "2026-04-21T15:00:00",
+  "summary": "核心功能已全部完成，可开始测试使用",
+  "remaining_tasks": [
     {
-      "id": "init-project",
-      "title": "初始化项目",
-      "description": "创建前后端项目脚手架，配置基础依赖和目录结构",
-      "status": "pending",
-      "order": 1
+      "id": "integration-test",
+      "title": "前后端联调测试",
+      "description": "测试完整的文件上传→校对→下载流程，确保前后端数据交互正确",
+      "priority": "high",
+      "notes": "需要配置大模型（Ollama/OpenAI/Anthropic）进行真实测试"
     },
     {
-      "id": "document-processing",
-      "title": "文档处理核心模块",
-      "description": "实现文档解析、智能分段、上下文管理",
-      "status": "pending",
-      "order": 2
+      "id": "error-handling",
+      "title": "错误处理优化",
+      "description": "增强异常处理逻辑，添加更友好的用户提示和降级方案",
+      "priority": "medium",
+      "notes": "包括网络错误、API 超时、文件过大等情况"
     },
     {
-      "id": "llm-integration",
-      "title": "大模型集成",
-      "description": "实现统一大模型接口、校对逻辑、术语检查",
-      "status": "pending",
-      "order": 3
+      "id": "sse-implementation",
+      "title": "完善 SSE 流式响应",
+      "description": "实现真正的实时进度反馈，修复当前 mock 数据问题",
+      "priority": "medium",
+      "notes": "前端需要适配 SSE 格式，后端需要修复 URL 参数解析"
     },
     {
-      "id": "api-interfaces",
-      "title": "API 接口设计",
-      "description": "设计并实现前后端 API 接口",
-      "status": "pending",
-      "order": 4
+      "id": "unit-tests",
+      "title": "单元测试",
+      "description": "为核心模块添加单元测试（文档解析、分段策略、校对服务）",
+      "priority": "low",
+      "notes": "可提升代码质量和可维护性"
     },
     {
-      "id": "ui-upload",
-      "title": "上传与配置组件",
-      "description": "实现文件上传、大模型配置面板、校对规则设置",
-      "status": "pending",
-      "order": 5
+      "id": "performance-opt",
+      "title": "性能优化",
+      "description": "优化大文档处理性能，添加并发控制和内存管理",
+      "priority": "low",
+      "notes": "针对 10 万字以上文档的优化"
+    }
+  ],
+  "optional_enhancements": [
+    {
+      "id": "custom-dictionary",
+      "title": "自定义词典",
+      "description": "允许用户添加自定义术语和校对规则"
     },
     {
-      "id": "ui-progress",
-      "title": "进度展示组件",
-      "description": "实现校对进度条、实时状态反馈",
-      "status": "pending",
-      "order": 6
+      "id": "history",
+      "title": "校对历史",
+      "description": "保存校对记录，支持历史记录查询和对比"
     },
     {
-      "id": "ui-result",
-      "title": "结果展示组件",
-      "description": "实现文档对比、修订高亮、批注面板",
-      "status": "pending",
-      "order": 7
+      "id": "batch-process",
+      "title": "批量处理",
+      "description": "支持一次性上传多个文档进行批量校对"
     },
     {
-      "id": "document-export",
-      "title": "文档导出模块",
-      "description": "实现修订标记、批注注入、文档导出",
-      "status": "pending",
-      "order": 8
-    },
-    {
-      "id": "deploy-config",
-      "title": "部署配置",
-      "description": "创建启动脚本和部署配置",
-      "status": "pending",
-      "order": 9
+      "id": "export-formats",
+      "title": "更多导出格式",
+      "description": "支持 PDF、Markdown 等格式导出"
     }
   ]
 }
