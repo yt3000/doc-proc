@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import os
 
-from app.api import upload, correct, download
+from app.api import upload, correct, download, export
 from app.core.config import settings
 
 app = FastAPI(
@@ -25,6 +25,7 @@ app.add_middleware(
 app.include_router(upload.router, prefix="/api/upload", tags=["文档上传"])
 app.include_router(correct.router, prefix="/api/correct", tags=["文档校对"])
 app.include_router(download.router, prefix="/api/download", tags=["文档下载"])
+app.include_router(export.router, prefix="/api/export", tags=["文档导出"])
 
 
 @app.get("/")
